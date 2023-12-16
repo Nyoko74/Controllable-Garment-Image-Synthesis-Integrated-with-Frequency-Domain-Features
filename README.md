@@ -8,7 +8,7 @@ The repository for Controllable Garment Image Synthesis Integrated with Frequenc
 Install Conda environment:
 ```
 conda env create -f environment.yml
-conda activate cgisGAN
+conda activate CGISgan
 ```
 
 Download ade20k pretrain modal for High Receptive Field Perceptual Loss:
