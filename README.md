@@ -1,4 +1,4 @@
-# Controllable-Garment-Image-Synthesis-Integrated-with-Frequency-Domain-Features
+# Controllable Garment Image Synthesis Integrated with Frequency Domain Features
 The repository for Controllable Garment Image Synthesis Integrated with Frequency Domain Features (PG2023).
 
 [[paper](https://onlinelibrary.wiley.com/doi/10.1111/cgf.14938)]
@@ -9,6 +9,12 @@ Install Conda environment:
 ```
 conda env create -f environment.yml
 conda activate cgisGAN
+```
+
+Download ade20k pretrain modal for High Receptive Field Perceptual Loss:
+```
+mkdir -p ade20k/ade20k-resnet50dilated-ppm_deepsup/
+wget -P ade20k/ade20k-resnet50dilated-ppm_deepsup/ http://sceneparsing.csail.mit.edu/model/pytorch/ade20k-resnet50dilated-ppm_deepsup/encoder_epoch_20.pth
 ```
 
 ## Pretrain Modal
