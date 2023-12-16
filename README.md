@@ -1,7 +1,7 @@
 # Controllable Garment Image Synthesis Integrated with Frequency Domain Features
 The repository for Controllable Garment Image Synthesis Integrated with Frequency Domain Features (PG2023).
 
-[[paper](https://onlinelibrary.wiley.com/doi/10.1111/cgf.14938)]
+[paper](https://onlinelibrary.wiley.com/doi/10.1111/cgf.14938)
 
 ## Requirements
 
@@ -18,11 +18,14 @@ wget -P ade20k/ade20k-resnet50dilated-ppm_deepsup/ http://sceneparsing.csail.mit
 ```
 
 ## Pretrain Modal
-You can obtain pretrained model by clicking [here](url).
-The pretrain model is trained on $256 \times 256$ clothing images.
+You can obtain pretrain model by clicking [here](url).
+The pretrain model is trained on $256 \times 256$ garment images.
 
 ## Dataset
-Download our dataset [here](url). 
+Our dataset is built based on the dataset of [FashionGAN](https://github.com/Cuiyirui/FashionGAN) ([https://drive.google.com/drive/folders/1DACqCXlJRQxRysO6RVNO7vOoR8YzrjTQ](https://drive.google.com/drive/folders/1DACqCXlJRQxRysO6RVNO7vOoR8YzrjTQ)).
+
+We have re-extracted the masks and contour lines as sketch from the ground truth in this dataset. 
+Regarding the method of mask extraction, you can refer to works such as [BAS-net](https://github.com/xuebinqin/BASNet) and [Segment Anything](https://github.com/facebookresearch/segment-anything).
 
 If you need to prepare your own dataset, please organize it in the following way.
 
@@ -61,9 +64,9 @@ If you need to prepare your own dataset, please organize it in the following way
 ### Description to The Floder `\train`  
 Regarding the sub folders and data descriptions in the train folder:
 
-    Image: Realistic clothing on the ground
-    Sketch: Clothing sketch
-    Mask: Clothing Mask
+    Image: Garment ground truth
+    Sketch: Garment sketch
+    Mask: Garment Mask
 
 For a data unit, the image, its corresponding sketch, and the corresponding mask are named with the same file name, for example:
 
@@ -85,6 +88,7 @@ You need to make some edit to the script to generate your texture: (in `line 55-
     python train.py --outdir [your_output_dir] --img_data [your_train_dataset_dir] --eval_img_data [your_eval_dataset_dir] --gpus 1 --kimg 25000 --gamma 10 --aug noaug --metrics True --batch 8 --snap 1
 
 you can change `--batch` to better utilize your GPU.
+
 ## Evaluation
 
 To evaluate your model, use the following command:
