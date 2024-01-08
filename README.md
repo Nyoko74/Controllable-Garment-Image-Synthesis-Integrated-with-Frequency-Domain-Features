@@ -16,11 +16,12 @@ Download ade20k pretrain modal for High Receptive Field Perceptual Loss:
 mkdir -p ade20k/ade20k-resnet50dilated-ppm_deepsup/
 wget -P ade20k/ade20k-resnet50dilated-ppm_deepsup/ http://sceneparsing.csail.mit.edu/model/pytorch/ade20k-resnet50dilated-ppm_deepsup/encoder_epoch_20.pth
 ```
-
+<!--
 ## Pretrain Modal
 You can obtain pretrain model by clicking [here](url).
 The pretrain model is trained on $256 \times 256$ garment images.
-
+-->
+ 
 ## Dataset
 Our dataset is built based on the dataset of [FashionGAN](https://github.com/Cuiyirui/FashionGAN) ([https://drive.google.com/drive/folders/1DACqCXlJRQxRysO6RVNO7vOoR8YzrjTQ](https://drive.google.com/drive/folders/1DACqCXlJRQxRysO6RVNO7vOoR8YzrjTQ)).
 
